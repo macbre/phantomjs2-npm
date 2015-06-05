@@ -351,15 +351,14 @@ function copyIntoPlace(extractedPath, targetPath) {
 
 function getDownloadUrl() {
   var defaultCdnUrl = 'https://bitbucket.org/ariya/phantomjs/downloads'
-  var eugene1gCdnUrl = 'https://github.com/eugene1g/phantomjs/releases/download/2.0.0-bin/'
+  var eugene1gCdnUrl = 'https://github.com/bprodoehl/phantomjs/releases/download/v2.0.0-20150528/'
 
   var versionSuffix = ''
-  if (process.platform === 'linux' && process.arch === 'x64' && os.release().indexOf('amzn') != -1) {
-    versionSuffix = 'centos_x86_64.zip'
+  if (process.platform === 'linux' && process.arch === 'x64') {
+    versionSuffix = '20150528-u1404-x86_64.zip'
     defaultCdnUrl = eugene1gCdnUrl
   } else if (process.platform === 'darwin') {
     versionSuffix = 'macosx.zip'
-    defaultCdnUrl = eugene1gCdnUrl
   } else if (process.platform === 'win32') {
     versionSuffix = 'windows.zip'
   }
