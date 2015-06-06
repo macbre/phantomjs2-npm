@@ -351,7 +351,8 @@ function copyIntoPlace(extractedPath, targetPath) {
 
 function getDownloadUrl() {
   var defaultCdnUrl = 'https://bitbucket.org/ariya/phantomjs/downloads'
-  var eugene1gCdnUrl = 'https://github.com/bprodoehl/phantomjs/releases/download/v2.0.0-20150528/'
+  var eugene1gCdnUrl = 'https://github.com/bprodoehl/phantomjs/releases/download/v2.0.0-20150528'
+  var travisUrl = 'https://s3.amazonaws.com/travis-phantomjs'
 
   var versionSuffix = ''
   if (process.platform === 'linux' && process.arch === 'x64') {
@@ -361,6 +362,13 @@ function getDownloadUrl() {
     versionSuffix = 'macosx.zip'
   } else if (process.platform === 'win32') {
     versionSuffix = 'windows.zip'
+  }
+
+  // support Travis (runs Ubuntu 12.04)
+  // @see https://github.com/travis-ci/travis-ci/issues/3225
+  if (process.env.TRAVIS) {
+	versionSuffix = 'ubuntu-12.04.tar.bz2'
+	defaultCdnUrl = travisUrl;
   }
 
   if (!versionSuffix) {
