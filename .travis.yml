@@ -1,10 +1,13 @@
 language: node_js
+sudo: required
 node_js:
-  - "iojs"
   - "0.12"
   - "0.10"
 
-# https://github.com/travis-ci/travis-ci/issues/3225
 before_install:
+  # https://github.com/bprodoehl/phantomjs/releases/
+  - sudo apt-get install -qq libicu52 libjpeg8 libfontconfig1 libwebp5 libssl1.0.0
+  # try to use the Travis-provided binary
+  # https://github.com/travis-ci/travis-ci/issues/3225
   - export PATH="/usr/local/phantomjs-2.0.0/bin:$PATH"
   - npm install -g npm
