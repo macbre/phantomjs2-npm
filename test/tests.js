@@ -27,6 +27,11 @@ exports.testPhantomExecutesTestScript = function (test) {
   childProcess.execFile(phantomjs.path, childArgs, function (err, stdout, stderr) {
     var value = (stdout.indexOf('msec') !== -1)
     test.ok(value, 'Test script should have executed and returned run time')
+
+	if (err) {
+		console.log(err)
+	}
+
     test.done()
   })
 }
