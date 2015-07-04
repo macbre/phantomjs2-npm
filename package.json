@@ -1,8 +1,9 @@
 {
-  "name": "phantomjs",
+  "name": "phantomjs2",
   "version": "2.0.0-alpha",
   "keywords": [
     "phantomjs",
+    "phantomjs2",
     "headless",
     "webkit"
   ],
@@ -32,7 +33,7 @@
   ],
   "main": "lib/phantomjs",
   "bin": {
-    "phantomjs": "./bin/phantomjs"
+    "phantomjs2": "./bin/phantomjs"
   },
   "scripts": {
     "install": "node install.js",
