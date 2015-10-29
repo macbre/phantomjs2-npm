@@ -351,14 +351,15 @@ function copyIntoPlace(extractedPath, targetPath) {
 
 function getDownloadUrl() {
   var defaultCdnUrl = 'https://bitbucket.org/ariya/phantomjs/downloads'
-  var macbreCdnUrl = 'https://github.com/macbre/phantomjs/releases/download/2.0.0';
+  var vitalliumCdnUrl = 'https://github.com/Vitallium/phantomjs/releases/download/2.0.1'
   var travisUrl = 'https://s3.amazonaws.com/travis-phantomjs'
 
   var versionSuffix = ''
   if (process.platform === 'linux' && process.arch === 'x64') {
     // @see https://github.com/macbre/phantomas/issues/540
-    versionSuffix = 'static-x86_64.tar.bz2'
-    defaultCdnUrl = macbreCdnUrl
+    // @see https://github.com/macbre/phantomas/issues/558
+    versionSuffix = 'linux-x86_64.tar.bz2'
+    defaultCdnUrl = vitalliumCdnUrl
   } else if (process.platform === 'darwin') {
     versionSuffix = 'macosx.zip'
   } else if (process.platform === 'win32') {
