@@ -358,7 +358,7 @@ function getDownloadUrl() {
   if (process.platform === 'linux' && process.arch === 'x64') {
     // @see https://github.com/macbre/phantomas/issues/540
     // @see https://github.com/macbre/phantomas/issues/558
-    versionSuffix = 'linux-x86_64.tar.bz2'
+    versionSuffix = 'linux-x86_64.zip'
     defaultCdnUrl = vitalliumCdnUrl
   } else if (process.platform === 'darwin') {
     versionSuffix = 'macosx.zip'
@@ -369,8 +369,8 @@ function getDownloadUrl() {
   // support Travis (runs Ubuntu 12.04)
   // @see https://github.com/travis-ci/travis-ci/issues/3225
   if (process.env.TRAVIS) {
-	versionSuffix = 'ubuntu-12.04.tar.bz2'
-	defaultCdnUrl = travisUrl;
+	//versionSuffix = 'ubuntu-12.04.tar.bz2'
+	//defaultCdnUrl = travisUrl;
   }
 
   if (!versionSuffix) {
