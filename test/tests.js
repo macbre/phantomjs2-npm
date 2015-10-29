@@ -8,6 +8,7 @@ var fs = require('fs')
 var path = require('path')
 var phantomjs = require('../lib/phantomjs')
 
+console.log('Using PhantomJS v' + phantomjs.version);
 
 exports.testDownload = function (test) {
   test.expect(1)
