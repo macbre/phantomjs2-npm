@@ -36,7 +36,7 @@
   },
   "scripts": {
     "install": "node install.js",
-    "test": "nodeunit --reporter=minimal test/tests.js && eslint ."
+    "test": "nodeunit --reporter=default test/tests.js && eslint ."
   },
   "dependencies": {
     "es6-promise": "~4.0.3",
