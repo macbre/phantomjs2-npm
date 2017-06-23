@@ -1,7 +1,13 @@
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 language: node_js
+dist: trusty
 sudo: false
+before_script:
+  - ldd ./lib/phantom/bin/phantomjs
+  - ./lib/phantom/bin/phantomjs --version
 node_js:
+  - "8"
+  - "7"
+  - "6"
   - "5"
   - "4"
-  - "0.12"
-  - "0.10"

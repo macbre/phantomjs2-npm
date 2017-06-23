@@ -6,7 +6,6 @@
 var childProcess = require('child_process')
 var fs = require('fs')
 var path = require('path')
-var webdriverio = require('webdriverio')
 var phantomjs = require('../lib/phantomjs')
 var util = require('../lib/util')
 
@@ -105,22 +104,6 @@ exports.testPhantomExec = function (test) {
   p.on('exit', function (code) {
     test.equals(code, 123, 'Exit code should be returned from phantom script')
     test.done()
-  })
-}
-
-exports.testPhantomRun = function (test) {
-  test.expect(1)
-  var wdOpts = { desiredCapabilities: { browserName: 'phantomjs' } }
-  phantomjs.run('--webdriver=4444').then(function (p) {
-    webdriverio.remote(wdOpts).init()
-      .url('https://developer.mozilla.org/en-US/')
-      .getTitle().then(function (title) {
-        test.equals(title, 'Mozilla Developer Network', 'Page title')
-      })
-      .then(function () {
-        p.kill()
-        test.done()
-      })
   })
 }
 

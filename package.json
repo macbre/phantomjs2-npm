@@ -36,7 +36,7 @@
   },
   "scripts": {
     "install": "node install.js",
-    "test": "nodeunit --reporter=minimal test/tests.js && eslint ."
+    "test": "nodeunit --reporter=default test/tests.js && eslint ."
   },
   "dependencies": {
     "es6-promise": "~4.0.3",
@@ -51,7 +51,6 @@
   },
   "devDependencies": {
     "eslint": "2.7.0",
-    "nodeunit": "0.9.1",
-    "webdriverio": "~4.2.3"
+    "nodeunit": "0.9.1"
   }
 }
