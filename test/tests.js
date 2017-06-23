@@ -6,7 +6,6 @@
 var childProcess = require('child_process')
 var fs = require('fs')
 var path = require('path')
-var webdriverio = require('webdriverio')
 var phantomjs = require('../lib/phantomjs')
 var util = require('../lib/util')
 

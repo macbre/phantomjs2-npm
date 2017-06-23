@@ -51,7 +51,6 @@
   },
   "devDependencies": {
     "eslint": "2.7.0",
-    "nodeunit": "0.9.1",
-    "webdriverio": "~4.2.3"
+    "nodeunit": "0.9.1"
   }
 }
