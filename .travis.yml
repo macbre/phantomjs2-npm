@@ -1,5 +1,6 @@
 # https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 language: node_js
+dist: trusty
 sudo: false
 before_script:
   - env | sort
