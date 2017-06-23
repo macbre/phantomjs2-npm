@@ -108,22 +108,6 @@ exports.testPhantomExec = function (test) {
   })
 }
 
-exports.testPhantomRun = function (test) {
-  test.expect(1)
-  var wdOpts = { desiredCapabilities: { browserName: 'phantomjs' } }
-  phantomjs.run('--webdriver=4444').then(function (p) {
-    webdriverio.remote(wdOpts).init()
-      .url('https://developer.mozilla.org/en-US/')
-      .getTitle().then(function (title) {
-        test.equals(title, 'Mozilla Developer Network', 'Page title')
-      })
-      .then(function () {
-        p.kill()
-        test.done()
-      })
-  })
-}
-
 exports.testPhantomRunError = function (test) {
   test.expect(1)
   phantomjs.run('--bogus').then(function () {
