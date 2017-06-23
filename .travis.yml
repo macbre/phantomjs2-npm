@@ -3,8 +3,8 @@ language: node_js
 dist: trusty
 sudo: false
 before_script:
-  - env | sort
   - ldd ./lib/phantom/bin/phantomjs
+  - ./lib/phantom/bin/phantomjs --version
 node_js:
   - "8"
   - "7"
