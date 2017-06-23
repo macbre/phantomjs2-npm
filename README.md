@@ -1,9 +1,9 @@
 phantomjs-prebuilt
 ==================
 
-An NPM installer for [PhantomJS](http://phantomjs.org/), headless webkit with JS API.
+An NPM installer for [PhantomJS](http://phantomjs.org/) v2.5.0-development, headless webkit with JS API.
 
-[![Build Status](https://travis-ci.org/Medium/phantomjs.svg?branch=master)](https://travis-ci.org/Medium/phantomjs)
+[![Build Status](https://travis-ci.org/macbre/phantomjs2-npm.svg?branch=master)](https://travis-ci.org/macbre/phantomjs2-npm)
 
 Building and Installing
 -----------------------
