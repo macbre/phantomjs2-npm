@@ -6,8 +6,6 @@ before_script:
   - ldd ./lib/phantom/bin/phantomjs
   - ./lib/phantom/bin/phantomjs --version
 node_js:
-  - "8"
-  - "7"
-  - "6"
-  - "5"
-  - "4"
+  - 10
+  - 8
+  - 6
