@@ -1,5 +1,5 @@
-phantomjs-prebuilt
-==================
+phantomjs-prebuilt-macbre
+=========================
 
 An NPM installer for [PhantomJS](http://phantomjs.org/) v2.5.0-development, headless webkit with JS API.
 
@@ -9,7 +9,7 @@ Building and Installing
 -----------------------
 
 ```shell
-npm install phantomjs-prebuilt
+npm install phantomjs-prebuilt-macbre
 ```
 
 Or grab the source and
